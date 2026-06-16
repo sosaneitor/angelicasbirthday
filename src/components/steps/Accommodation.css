@@ -1,0 +1,134 @@
+.accom-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+}
+
+.accom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+.accom-heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+/* Airbnb-style card */
+.airbnb-card {
+  width: 100%;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  color: var(--dark-deep);
+}
+
+.airbnb-photo {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.airbnb-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 3rem;
+}
+
+.airbnb-photo-placeholder small {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.airbnb-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dark-deep);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.airbnb-logo {
+  color: #FF385C;
+  font-size: 1rem;
+}
+
+.airbnb-info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.airbnb-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-deep);
+  text-align: left;
+}
+
+.airbnb-dates {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.airbnb-amenities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 0.3rem;
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.amenity-icon {
+  font-size: 1.2rem;
+}
+
+.amenity-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.accom-note {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--cyan-light);
+}

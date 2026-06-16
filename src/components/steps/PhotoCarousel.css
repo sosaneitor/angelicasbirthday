@@ -1,0 +1,96 @@
+.carousel-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 420px;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+.carousel-heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+.carousel-wrapper {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.photo-swiper {
+  width: 100%;
+  padding-bottom: 2.5rem !important;
+}
+
+.photo-swiper .swiper-pagination-bullet {
+  background: var(--cyan-light);
+  opacity: 0.4;
+}
+
+.photo-swiper .swiper-pagination-bullet-active {
+  background: var(--cyan);
+  opacity: 1;
+}
+
+.photo-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(251, 113, 133, 0.12));
+  border: 2px dashed rgba(103, 232, 249, 0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.photo-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--cyan);
+  opacity: 0.4;
+}
+
+.photo-placeholder small {
+  font-size: 0.8rem;
+  color: var(--cyan-light);
+  opacity: 0.5;
+}
+
+.photo-path {
+  font-family: monospace;
+  font-size: 0.65rem !important;
+  opacity: 0.3 !important;
+}
+
+.photo-caption {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--sand-light);
+  padding: 0 0.5rem;
+}
+
+.carousel-hint {
+  font-size: 0.8rem;
+  color: var(--cyan-light);
+}

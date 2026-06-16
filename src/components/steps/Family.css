@@ -1,0 +1,110 @@
+.family-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem 1.5rem;
+}
+
+.family-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 400px;
+  z-index: 1;
+  text-align: center;
+}
+
+.family-turtle-big {
+  font-size: 4rem;
+  filter: drop-shadow(0 4px 20px rgba(6, 182, 212, 0.5));
+}
+
+.family-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--cyan-light);
+}
+
+.family-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.family-photo-placeholder {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(13, 148, 136, 0.15));
+  border: 2px dashed rgba(103, 232, 249, 0.3);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.family-photo-placeholder small {
+  font-size: 0.8rem;
+  color: var(--cyan-light);
+  opacity: 0.6;
+}
+
+.family-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.family-cyan-name {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.cyan-letter {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, var(--cyan-light), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: float-letter 2s ease-in-out infinite;
+}
+
+.cyan-letter:nth-child(1) { animation-delay: 0s; }
+.cyan-letter:nth-child(2) { animation-delay: 0.15s; }
+.cyan-letter:nth-child(3) { animation-delay: 0.3s; }
+.cyan-letter:nth-child(4) { animation-delay: 0.45s; }
+
+@keyframes float-letter {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.family-meaning {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.family-age {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.family-age strong {
+  color: var(--sand);
+}
+
+.family-quote {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--turquoise-light);
+  opacity: 0.8;
+  padding: 0 1rem;
+}

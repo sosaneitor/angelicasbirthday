@@ -1,0 +1,64 @@
+.next-btn {
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--cyan), var(--turquoise));
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ease-out-back);
+  animation: reveal-up 0.8s var(--ease-out-expo) both;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.35);
+  -webkit-tap-highlight-color: transparent;
+  min-width: 200px;
+}
+
+.next-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.2));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.next-btn:active {
+  transform: scale(0.95);
+}
+
+.next-btn--coral {
+  background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+  box-shadow: 0 4px 20px rgba(251, 113, 133, 0.35);
+}
+
+.next-btn--gold {
+  background: linear-gradient(135deg, var(--sand), #F59E0B);
+  color: var(--dark-deep);
+  box-shadow: 0 4px 20px rgba(253, 230, 138, 0.35);
+}
+
+@media (hover: hover) {
+  .next-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(6, 182, 212, 0.5);
+  }
+  .next-btn:hover::before {
+    opacity: 1;
+  }
+  .next-btn--coral:hover {
+    box-shadow: 0 8px 30px rgba(251, 113, 133, 0.5);
+  }
+  .next-btn--gold:hover {
+    box-shadow: 0 8px 30px rgba(253, 230, 138, 0.5);
+  }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

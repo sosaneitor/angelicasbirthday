@@ -1,0 +1,169 @@
+.boarding-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+}
+
+.boarding-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 400px;
+  width: 100%;
+  z-index: 1;
+}
+
+.boarding-heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--white);
+  text-align: center;
+}
+
+/* Ticket card */
+.ticket {
+  width: 100%;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  color: var(--dark-deep);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  perspective: 1000px;
+}
+
+.ticket-header {
+  background: linear-gradient(135deg, #E11D48, #BE123C);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-header-return {
+  background: linear-gradient(135deg, var(--cyan-dark), var(--turquoise));
+}
+
+.ticket-airline {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.ticket-flight {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.ticket-body {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ticket-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.ticket-city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.city-code {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-deep);
+}
+
+.city-name {
+  font-size: 0.7rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ticket-arrow {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.arrow-line {
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+}
+
+.ticket-details {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.ticket-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  align-items: center;
+}
+
+.detail-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #999;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-deep);
+}
+
+.ticket-passenger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.passenger-names {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark-deep);
+}
+
+.ticket-tear {
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 8px,
+    var(--dark-deep) 8px,
+    var(--dark-deep) 16px
+  );
+  opacity: 0.08;
+}
+
+.boarding-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}

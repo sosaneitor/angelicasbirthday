@@ -1,0 +1,91 @@
+.clues-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem 1.5rem;
+}
+
+.clues-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 400px;
+  z-index: 1;
+  text-align: center;
+}
+
+.clues-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--sand);
+}
+
+.clues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  min-height: 280px;
+}
+
+.clue-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(103, 232, 249, 0.15);
+  border-radius: 16px;
+}
+
+.clue-emoji {
+  font-size: 2rem;
+}
+
+.clue-text {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+.dodge-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dodge-btn {
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-deep);
+  background: linear-gradient(135deg, var(--sand), #F59E0B);
+  box-shadow: 0 4px 25px rgba(253, 230, 138, 0.4);
+  transition: transform 0.2s;
+  animation: wiggle 0.6s ease-in-out;
+}
+
+.dodge-btn:active {
+  transform: scale(0.95);
+}
+
+.dodge-taunt {
+  font-size: 0.85rem;
+  color: var(--coral);
+  font-style: italic;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  60% { transform: rotate(-3deg); }
+  80% { transform: rotate(3deg); }
+}
