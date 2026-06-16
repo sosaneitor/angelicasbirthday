@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import TurtleAnimated from '../TurtleAnimated';
 import './Countdown.css';
 
 interface CountdownProps {
@@ -11,17 +12,7 @@ export default function Countdown({ timeLeft }: CountdownProps) {
   return (
     <div className="countdown-screen">
       <div className="countdown-content">
-        <motion.div
-          className="turtle-swim"
-          animate={{
-            x: [0, 15, 0, -15, 0],
-            y: [0, -8, -15, -8, 0],
-            rotate: [0, 5, 0, -5, 0],
-          }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <span className="turtle-emoji">🐢</span>
-        </motion.div>
+        <TurtleAnimated size={120} />
 
         <motion.h2
           className="countdown-title"
@@ -65,7 +56,7 @@ export default function Countdown({ timeLeft }: CountdownProps) {
           animate={{ opacity: [0, 0.7, 0.4, 0.7] }}
           transition={{ delay: 1.5, duration: 3, repeat: Infinity }}
         >
-          🌊 Paciencia, el mar trae sorpresas... 🌊
+          ✨ Ten paciencia, algo mágico te espera... ✨
         </motion.p>
       </div>
     </div>

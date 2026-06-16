@@ -1,0 +1,98 @@
+.turtle-container {
+  position: relative;
+  filter: drop-shadow(0 8px 25px rgba(6, 182, 212, 0.4));
+}
+
+.turtle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.turtle-shell {
+  fill: #2D8B5E;
+  stroke: #1a6b45;
+  stroke-width: 1.5;
+}
+
+.turtle-shell-top {
+  fill: #3DA86E;
+  stroke: none;
+}
+
+.turtle-pattern {
+  stroke: #2D8B5E;
+  stroke-width: 2;
+  fill: none;
+  opacity: 0.7;
+}
+
+.turtle-head {
+  fill: #7EC882;
+  stroke: #5DAF6B;
+  stroke-width: 1;
+}
+
+.turtle-eye {
+  fill: white;
+  stroke: #333;
+  stroke-width: 0.5;
+}
+
+.turtle-leg {
+  fill: #7EC882;
+  stroke: #5DAF6B;
+  stroke-width: 1;
+}
+
+.turtle-tail {
+  stroke: #7EC882;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* Bubble particles */
+.turtle-bubbles {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 30px;
+  height: 50px;
+}
+
+.turtle-bubble {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(103, 232, 249, 0.4);
+  border: 1px solid rgba(103, 232, 249, 0.5);
+  animation: turtle-bubble-float 4s ease-in-out infinite;
+}
+
+.turtle-bubble:nth-child(2) {
+  left: 10px;
+  width: 4px;
+  height: 4px;
+}
+
+.turtle-bubble:nth-child(3) {
+  left: 5px;
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes turtle-bubble-float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-40px) scale(0.4);
+    opacity: 0;
+  }
+}
