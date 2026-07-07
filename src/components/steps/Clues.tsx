@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import NextButton from '../NextButton';
+import { haptic } from '../../utils/haptics';
 import './Clues.css';
 
 interface CluesProps {
@@ -34,6 +35,7 @@ export default function Clues({ onNext }: CluesProps) {
 
   const handleButtonClick = () => {
     if (dodgeCount < 3) {
+      haptic('playful');
       setDodgeCount(d => d + 1);
       const maxX = 100;
       const maxY = 60;

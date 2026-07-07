@@ -12,12 +12,11 @@ interface PhotoCarouselProps {
 }
 
 const photos = [
-  { id: 1, caption: 'Nuestro primer viaje juntos ✈️' },
-  { id: 2, caption: 'Momentos que valen oro 💛' },
-  { id: 3, caption: 'La llegada de Cyan 🐢' },
-  { id: 4, caption: 'Nuestra pequeña familia 👨‍👩‍👦' },
-  { id: 5, caption: 'Amando sin límites 💙' },
-  { id: 6, caption: 'Juntos somos más 🌊' },
+  { id: 1, caption: 'Nuestro primer viaje juntos ✈️', type: 'image', src: '/photos/1.jpeg' },
+  { id: 2, caption: 'Momentos que valen oro 💛', type: 'image', src: '/photos/2.jpeg' },
+  { id: 3, caption: 'La llegada de Cyan 🐢', type: 'image', src: '/photos/3.jpeg' },
+  { id: 5, caption: 'Amando sin límites 💙', type: 'image', src: '/photos/5.jpeg' },
+  { id: 6, caption: 'Juntos somos más 🌊', type: 'image', src: '/photos/6.jpeg' },
 ];
 
 export default function PhotoCarousel({ onNext }: PhotoCarouselProps) {
@@ -53,11 +52,24 @@ export default function PhotoCarousel({ onNext }: PhotoCarouselProps) {
             {photos.map((photo) => (
               <SwiperSlide key={photo.id}>
                 <div className="photo-slide">
-                  <div className="photo-placeholder">
-                    <span className="photo-number">{photo.id}</span>
-                    <small>Agrega tu foto aquí</small>
-                    <small className="photo-path">public/photos/{photo.id}.jpg</small>
-                  </div>
+                  {photo.type === 'video' ? (
+                    <video
+                      className="photo-media"
+                      src={photo.src}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                    />
+                  ) : (
+                    <img
+                      className="photo-media"
+                      src={photo.src}
+                      alt={photo.caption}
+                      loading="lazy"
+                    />
+                  )}
                   <p className="photo-caption">{photo.caption}</p>
                 </div>
               </SwiperSlide>

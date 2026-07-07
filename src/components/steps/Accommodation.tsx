@@ -1,10 +1,23 @@
 import { motion } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 import NextButton from '../NextButton';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import './Accommodation.css';
 
 interface AccommodationProps {
   onNext: () => void;
 }
+
+// Cualquier foto que agregues en src/assets/airbnb/ aparece sola aquí.
+const airbnbModules = import.meta.glob(
+  '../../assets/airbnb/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, import: 'default' }
+);
+const airbnbPhotos = Object.entries(airbnbModules)
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(([, src]) => src as string);
 
 const amenities = [
   { icon: '🏊', label: 'Piscina' },
@@ -33,10 +46,29 @@ export default function Accommodation({ onNext }: AccommodationProps) {
           transition={{ delay: 0.3, duration: 0.8 }}
         >
           <div className="airbnb-photo">
-            <div className="airbnb-photo-placeholder">
-              <span>🏠</span>
-              <small>Foto del Airbnb</small>
-            </div>
+            {airbnbPhotos.length === 0 ? (
+              <div className="airbnb-photo-placeholder">
+                <span>🏠</span>
+                <small>Agrega fotos en src/assets/airbnb/</small>
+              </div>
+            ) : airbnbPhotos.length === 1 ? (
+              <img className="airbnb-img" src={airbnbPhotos[0]} alt="Airbnb" loading="lazy" />
+            ) : (
+              <Swiper
+                modules={[Autoplay, Pagination]}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                loop
+                pagination={{ clickable: true }}
+                grabCursor
+                className="airbnb-swiper"
+              >
+                {airbnbPhotos.map((src, i) => (
+                  <SwiperSlide key={i}>
+                    <img className="airbnb-img" src={src} alt={`Airbnb ${i + 1}`} loading="lazy" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
             <div className="airbnb-badge">
               <span className="airbnb-logo">⌂</span> Superhost
             </div>

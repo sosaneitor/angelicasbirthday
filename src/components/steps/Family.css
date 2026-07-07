@@ -33,24 +33,15 @@
   overflow: hidden;
 }
 
-.family-photo-placeholder {
+.family-photo {
   width: 100%;
-  height: 220px;
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(13, 148, 136, 0.15));
-  border: 2px dashed rgba(103, 232, 249, 0.3);
+  height: 320px;
+  object-fit: cover;
+  object-position: center 30%;
   border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 2.5rem;
-}
-
-.family-photo-placeholder small {
-  font-size: 0.8rem;
-  color: var(--cyan-light);
-  opacity: 0.6;
+  border: 2px solid rgba(103, 232, 249, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: block;
 }
 
 .family-text {

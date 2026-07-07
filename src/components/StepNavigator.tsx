@@ -45,6 +45,9 @@ export default function StepNavigator({ currentStep, children }: StepNavigatorPr
           alignItems: 'center',
           justifyContent: 'center',
           position: 'relative',
+          boxSizing: 'border-box',
+          paddingTop: 'calc(env(safe-area-inset-top, 0px) + 30px)',
+          paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 8px)',
         }}
       >
         {children}

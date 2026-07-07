@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import NextButton from '../NextButton';
+import { haptic } from '../../utils/haptics';
 import './Welcome.css';
 
 interface WelcomeProps {
@@ -15,6 +16,7 @@ export default function Welcome({ onNext }: WelcomeProps) {
     if (hasConfetti.current) return;
     hasConfetti.current = true;
 
+    haptic('success');
     const duration = 3000;
     const end = Date.now() + duration;
 

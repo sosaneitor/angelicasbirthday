@@ -80,3 +80,49 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* ====== NAVEGACIÓN POR GESTOS ====== */
+.swipe-area {
+  width: 100%;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hint flotante de "desliza" */
+.swipe-hint {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+  z-index: 40;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--white);
+  background: rgba(6, 182, 212, 0.22);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(103, 232, 249, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Deja respirar al botón de sonido en móviles con notch/gestos */
+.sound-toggle {
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 20px) !important;
+  right: calc(env(safe-area-inset-right, 0px) + 20px) !important;
+}
+
+/* ====== ACCESIBILIDAD: MENOS MOVIMIENTO ====== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

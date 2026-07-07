@@ -27,6 +27,37 @@
   transition: opacity 0.3s;
 }
 
+/* Brillo que recorre el botón para llamar la atención */
+.next-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: btn-shimmer 3.4s ease-in-out 1.2s infinite;
+  pointer-events: none;
+}
+
+@keyframes btn-shimmer {
+  0% { left: -60%; }
+  55%, 100% { left: 130%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .next-btn::after {
+    animation: none;
+    display: none;
+  }
+}
+
 .next-btn:active {
   transform: scale(0.95);
 }

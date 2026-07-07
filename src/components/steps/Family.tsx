@@ -43,10 +43,12 @@ export default function Family({ onNext }: FamilyProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8 }}
         >
-          <div className="family-photo-placeholder">
-            <span>📸</span>
-            <small>Foto familiar</small>
-          </div>
+          <img
+            className="family-photo"
+            src="/photos/6.jpeg"
+            alt="Cyan, nuestra tortuguita"
+            loading="lazy"
+          />
         </motion.div>
 
         <motion.div
