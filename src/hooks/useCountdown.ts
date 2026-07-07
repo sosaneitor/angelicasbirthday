@@ -8,8 +8,8 @@ interface TimeLeft {
   total: number;
 }
 
-// July 10, 2026 at 12:00 PM Colombia time (UTC-5)
-const TARGET_DATE = new Date('2026-07-10T17:00:00.000Z'); // 12:00 PM COT = 17:00 UTC
+// July 10, 2026 at 3:00 PM Colombia time (UTC-5)
+const TARGET_DATE = new Date('2026-07-10T20:00:00.000Z'); // 3:00 PM COT = 20:00 UTC
 
 export function useCountdown(): { timeLeft: TimeLeft; isReady: boolean } {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
